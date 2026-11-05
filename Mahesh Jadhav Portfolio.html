@@ -1,0 +1,573 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mahesh Jadhav Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: an analyst's report — hero with a "story" player, metric strip, timeline, project cards, skills matrix */
+:root{
+  --bg:#eef2f4; --paper:#ffffff; --ink:#12263a; --muted:#56687a; --line:#d4dde4;
+  --accent:#0f7c6e; --accent-soft:#dcefeb; --mark:#d98a1e; --mark-soft:#f8ead4; --stage:#12263a; --stage-ink:#eef6f5;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1820; --paper:#15222c; --ink:#e4ecf1; --muted:#9db0bf; --line:#263744;
+  --accent:#4cc3b0; --accent-soft:#183b37; --mark:#f0ac4a; --mark-soft:#3b2c16; --stage:#081118; --stage-ink:#e4f2f0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1820; --paper:#15222c; --ink:#e4ecf1; --muted:#9db0bf; --line:#263744;
+  --accent:#4cc3b0; --accent-soft:#183b37; --mark:#f0ac4a; --mark-soft:#3b2c16; --stage:#081118; --stage-ink:#e4f2f0; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1080px;margin:0 auto}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:18px}
+.mono-badge{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--paper);display:grid;place-items:center;font-family:var(--display);font-weight:800}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.navlinks a{color:var(--muted);text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:center;padding-block:24px 40px}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,62px);line-height:1.02;margin:12px 0 14px;letter-spacing:-.02em;text-wrap:balance}
+h1 span{color:var(--accent)}
+.sub{font-size:18px;color:var(--muted);max-width:52ch;margin:0 0 22px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--paper);cursor:pointer;font:inherit;font-weight:600}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:14.5px}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+/* player */
+.player{background:var(--stage);color:var(--stage-ink);border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(10,30,45,.55)}
+.stage{position:relative;min-height:340px;max-width:100%;padding:28px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.stage::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 85% 15%, color-mix(in srgb,var(--accent) 35%,transparent), transparent 45%),
+  radial-gradient(circle at 10% 90%, color-mix(in srgb,var(--mark) 25%,transparent), transparent 40%);opacity:.9}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+.scene{position:relative;z-index:1;transition:opacity .45s ease, transform .45s ease}
+.scene.out{opacity:0;transform:translateY(8px)}
+.s-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mark)}
+.s-title{font-family:var(--display);font-weight:800;font-size:clamp(22px,3.6vw,34px);line-height:1.1;margin:8px 0 10px;text-wrap:balance}
+.s-text{color:color-mix(in srgb,var(--stage-ink) 78%,transparent);font-size:15.5px;max-width:46ch;margin:0}
+.bars{display:flex;align-items:flex-end;gap:14px;height:110px;margin-top:16px}
+.bar{width:54px;border-radius:6px 6px 0 0;background:var(--mark);height:0;transition:height .7s cubic-bezier(.2,.8,.2,1);position:relative}
+.bar.alt{background:var(--accent)}
+.bar b{position:absolute;top:-24px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:13px;color:var(--stage-ink)}
+.bar i{position:absolute;bottom:-22px;left:-10px;right:-10px;text-align:center;font-style:normal;font-size:12px;color:color-mix(in srgb,var(--stage-ink) 70%,transparent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{border:1px solid color-mix(in srgb,var(--stage-ink) 30%,transparent);border-radius:999px;padding:5px 12px;font-size:13.5px;opacity:0;transform:translateY(6px);transition:opacity .4s, transform .4s}
+.on .chip{opacity:1;transform:none}
+.big{font-family:var(--display);font-weight:800;font-size:clamp(40px,7vw,64px);color:var(--mark);line-height:1}
+.playover{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:color-mix(in srgb,var(--stage) 35%,transparent);border:0;cursor:pointer;color:var(--stage-ink)}
+.playover span{width:72px;height:72px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 0 0 10px color-mix(in srgb,var(--accent) 25%,transparent)}
+.controls{display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid rgba(255,255,255,.08)}
+.ctl{background:none;border:0;color:var(--stage-ink);cursor:pointer;padding:4px;display:grid;place-items:center}
+.track{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.14);overflow:hidden;cursor:pointer;min-width:0}
+.fill{height:100%;width:0;background:var(--mark)}
+.time{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums;color:color-mix(in srgb,var(--stage-ink) 75%,transparent)}
+/* sections */
+section{padding-block:40px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,34px);margin:0;letter-spacing:-.01em}
+.sec-head p{margin:0;color:var(--muted);max-width:52ch}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stat .n{font-family:var(--display);font-weight:800;font-size:34px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.05}
+.stat .l{color:var(--muted);font-size:14.5px;margin-top:6px}
+.about{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+.about p{margin:0 0 12px;max-width:62ch}
+.focus{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+.focus h3{margin:0 0 10px;font-size:16px}
+.focus li{margin-bottom:8px;color:var(--muted)}
+.focus ul{margin:0;padding-left:18px}
+/* timeline */
+.timeline{position:relative;display:flex;flex-direction:column;gap:18px;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.job{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.job::before{content:"";position:absolute;left:-26px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--accent)}
+.job.past::before{border-color:var(--muted)}
+.job-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.job h3{margin:0;font-size:18px}
+.when{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.role{color:var(--accent);font-weight:600;margin:2px 0 8px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px;margin:8px 0 10px}
+.ladder span{background:var(--accent-soft);color:var(--accent);padding:3px 10px;border-radius:999px;font-weight:600}
+.ladder em{font-style:normal;color:var(--muted)}
+.job ul{margin:0;padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:4px}
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.proj{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.proj-top{display:flex;align-items:center;gap:12px}
+.pico{width:42px;height:42px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
+.pico.m{background:var(--mark-soft);color:var(--mark)}
+.proj h3{margin:0;font-size:18px;line-height:1.25}
+.award{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mark)}
+.proj p{margin:0;color:var(--muted)}
+.result{display:flex;align-items:baseline;gap:10px;padding:10px 12px;border-radius:10px;background:var(--bg)}
+.result b{font-family:var(--display);font-size:22px;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
+.result span{font-size:14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tag{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:6px;padding:2px 8px;color:var(--muted)}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sk{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+.sk h3{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:16px}
+.sk h3 .icon{color:var(--accent)}
+.lvl{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.lvl:last-child{border-bottom:0}
+.pips{display:flex;gap:3px;flex:none;align-items:center}
+.pips i{width:9px;height:9px;border-radius:2px;background:var(--line)}
+.pips i.f{background:var(--accent)}
+.pips i.l{background:var(--mark)}
+.legend{font-size:13px;color:var(--muted);margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+/* edu + awards */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h3{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:17px}
+.row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .pico{width:36px;height:36px}
+.row b{display:block}
+.row small{color:var(--muted);font-size:14px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--mark-soft);color:var(--mark);margin-left:6px;white-space:nowrap}
+/* contact */
+.contact{background:var(--stage);color:var(--stage-ink);border-radius:16px;padding:32px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center}
+.contact h2{color:var(--stage-ink)}
+.contact p{color:color-mix(in srgb,var(--stage-ink) 75%,transparent);margin:8px 0 0}
+.clist{display:flex;flex-direction:column;gap:10px}
+.citem{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;min-width:0}
+.citem a,.citem span{color:var(--stage-ink);text-decoration:none;overflow-wrap:anywhere}
+.citem button{margin-left:auto;background:none;border:1px solid rgba(255,255,255,.25);color:var(--stage-ink);border-radius:6px;padding:3px 8px;font:inherit;font-size:12px;cursor:pointer}
+footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
+
+
+/* tech stack */
+.stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stk{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stk h3{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:16px}
+.stk h3 .icon{color:var(--accent)}
+.tools{display:flex;flex-wrap:wrap;gap:6px}
+.tools span{font-size:13.5px;background:var(--accent-soft);color:var(--ink);border-radius:6px;padding:3px 9px}
+.building{margin-top:14px;font-size:14.5px;color:var(--muted);background:var(--mark-soft);border-radius:10px;padding:10px 14px}
+.building b{color:var(--ink)}
+@media (max-width:860px){.stack{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.stack{grid-template-columns:1fr}}
+/* case studies */
+.cases{display:flex;flex-direction:column;gap:20px}
+.case{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+.case-text{display:flex;flex-direction:column;gap:12px;min-width:0}
+.pwd{margin:0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 14px}
+.pwd dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.pwd dd{margin:0;color:var(--muted);font-size:15px}
+.viz{background:var(--bg);border-radius:12px;padding:16px;min-width:0;align-self:start}
+.viz-title{font-weight:600;font-size:14.5px;margin-bottom:10px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.viz-sub{font-size:12.5px;color:var(--muted);margin:12px 0 6px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.illus{font-style:normal;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--mark-soft);color:var(--mark);padding:2px 7px;border-radius:999px}
+.viz-note{font-size:13px;color:var(--muted);margin:8px 0 0}
+.hrow{display:grid;grid-template-columns:104px minmax(0,1fr) 52px;gap:10px;align-items:center;margin-bottom:8px;font-size:13.5px}
+.hl{color:var(--muted)}
+.htrack{height:14px;background:var(--paper);border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.hfill{display:block;height:100%;background:var(--accent)}
+.hfill.mk{background:var(--mark)} .hfill.mute{background:var(--muted);opacity:.45}
+.hv{font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+.cols{display:flex;align-items:flex-end;gap:18px;height:140px;padding-top:18px}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0;position:relative}
+.cbar{width:100%;max-width:56px;background:var(--accent);border-radius:5px 5px 0 0;display:block}
+.cbar.mute{background:var(--muted);opacity:.45} .cbar.goal{background:transparent;border:2px dashed var(--mark);border-bottom:0}
+.cv{font-family:var(--mono);font-size:13px;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.cl{font-size:12.5px;color:var(--muted);margin-top:6px;text-align:center}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair{display:flex;flex-direction:column;align-items:center}
+.pbars{display:flex;gap:10px;align-items:flex-end;height:140px;width:100%;justify-content:center;padding-top:18px}
+.pbars .col{max-width:56px}
+.key{display:flex;gap:14px;font-size:12.5px;color:var(--muted);margin-top:10px}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.key i{width:10px;height:10px;border-radius:2px;background:var(--accent);display:inline-block}
+.key i.mute{background:var(--muted);opacity:.45}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:14.5px;color:var(--accent)}
+.kpi span{font-size:13px;color:var(--muted)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px;font-size:13px}
+.flow span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
+.flow span.hi{background:var(--accent);color:var(--paper);border-color:var(--accent);font-weight:600}
+.flow i{font-style:normal;color:var(--muted)}
+.mock{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px}
+.mtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.mtiles div{background:var(--bg);border-radius:8px;padding:8px}
+.mtiles small{display:block;font-size:11.5px;color:var(--muted)}
+.mtiles b{font-family:var(--display);font-size:18px;font-variant-numeric:tabular-nums}
+.mtiles b.good{color:var(--accent)}
+.tree{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.tree span{border-left:3px solid var(--mark);padding:3px 8px;background:var(--bg);border-radius:0 6px 6px 0}
+.tree span:nth-child(2){margin-left:14px} .tree span:nth-child(3){margin-left:28px}
+@media (max-width:860px){.case{grid-template-columns:1fr}}
+@media (max-width:520px){.pwd{grid-template-columns:1fr}.hrow{grid-template-columns:84px minmax(0,1fr) 46px}}
+@media (max-width:860px){
+  .hero,.about,.contact{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .skills{grid-template-columns:1fr 1fr}
+  .projects,.duo{grid-template-columns:1fr}
+}
+@media (max-width:520px){.skills{grid-template-columns:1fr}.navlinks{display:none}.stage{padding:20px}.bar{width:42px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-restart" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13v1M15 13v1M9 17h6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14a5 5 0 0 1 5 6"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M7 9h10M7 12h6"/><circle cx="17" cy="17" r="3"/></symbol>
+  <symbol id="i-ship" viewBox="0 0 24 24"><path d="M3 17l2 4h14l2-4H3zM5 17V9h14v8M9 9V5h6v4"/></symbol>
+</svg>
+
+<div class="wrap">
+  <nav>
+    <div class="brand"><span class="mono-badge">MJ</span>Mahesh Jadhav</div>
+    <div class="navlinks"><a href="#story">Story</a><a href="#work">Experience</a><a href="#projects">Case studies</a><a href="#stack">Tech stack</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>Open to data &amp; product analytics roles</div>
+      <h1>I turn messy data into <span>decisions leaders act on.</span></h1>
+      <p class="sub">Data and business analyst with 9 years 11 months of experience, including 6 years 7 months at Amazon. SQL, Power BI, QuickSight, AWS Redshift and GenAI, applied to real business problems.</p>
+      <div class="cta">
+        <button class="btn primary" type="button" id="heroPlay"><svg class="icon"><use href="#i-play"/></svg>Watch my 30-second story</button>
+        <a class="btn" href="#projects">See projects</a>
+      </div>
+      <div class="meta">
+        <span><svg class="icon"><use href="#i-pin"/></svg>Hyderabad, India</span>
+        <span><svg class="icon"><use href="#i-clock"/></svg>Available immediately</span>
+      </div>
+    </div>
+
+    <div class="player" id="story" aria-label="Animated story of my work">
+      <div class="stage">
+        <div class="grid-bg"></div>
+        <div class="scene" id="scene" aria-live="polite"></div>
+        <button class="playover" id="playover" type="button" aria-label="Play story"><span><svg class="icon" style="width:28px;height:28px"><use href="#i-play"/></svg></span></button>
+      </div>
+      <div class="controls">
+        <button class="ctl" id="toggle" type="button" aria-label="Play"><svg class="icon"><use href="#i-play"/></svg></button>
+        <button class="ctl" id="prev" type="button" aria-label="Previous scene">&#9664;</button><button class="ctl" id="next" type="button" aria-label="Next scene">&#9654;</button><button class="ctl" id="restart" type="button" aria-label="Restart"><svg class="icon"><use href="#i-restart"/></svg></button>
+        <div class="track" id="track" role="progressbar" aria-label="Story progress"><div class="fill" id="fill"></div></div>
+        <span class="time" id="time">0:00 / 0:30</span>
+      </div>
+    </div>
+  </header>
+
+  <section aria-label="Impact in numbers">
+    <div class="stats">
+      <div class="stat"><div class="n">25%</div><div class="l">Cut in contacts per 1,000 units, against a 10% goal</div></div>
+      <div class="stat"><div class="n">44.6M</div><div class="l">Customer contacts analysed</div></div>
+      <div class="stat"><div class="n">300+</div><div class="l">Daily users of my KPI scorecard</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Amazon awards: Titan, Empty Chair, Process Ninja</div></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <div class="sec-head"><h2>About me</h2></div>
+        <p>I work where business questions meet data. At Amazon, I partnered with operations, quality, compliance and product leaders to understand their problems, defined the metrics that mattered, and built the SQL, pipelines and dashboards behind their decisions.</p>
+        <p>I enjoy the full journey: refining a vague problem, finding the real driver in the data, and measuring whether the fix actually worked. Before Amazon, I spent over three years in freight forwarding operations, which taught me how the business runs on the ground.</p>
+      </div>
+      <div class="focus">
+        <h3>What I'm looking for</h3>
+        <ul>
+          <li>Product analytics, BI and senior data analyst roles</li>
+          <li>Teams that use data to decide what to build next</li>
+          <li>Growing towards product ownership, with data as my strength</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head"><h2>Experience</h2><p>Three companies, one thread: making operations measurable.</p></div>
+    <div class="timeline">
+      <article class="job">
+        <div class="job-head"><h3>Amazon Development Centre India</h3><span class="when">Dec 2019 – Jul 2026</span></div>
+        <div class="role">Business Analyst II · Hyderabad</div>
+        <div class="ladder"><span>BA Support</span><em>→</em><span>Business Analyst I</span><em>→</em><span>Business Analyst II</span></div>
+        <ul>
+          <li>Gathered requirements from operations, quality and compliance leaders and turned them into KPIs, data models and dashboards.</li>
+          <li>Built 100+ SQL ETL pipelines and 9–10 PySpark pipelines; tuned a critical pipeline from 8 hours to 1.5.</li>
+          <li>Improved first contact resolution from 80% to 87% and cut repeat contacts from 20% to 15%.</li>
+          <li>Built GenAI agents for SQL optimisation and variance detection; mentored two analysts.</li>
+        </ul>
+      </article>
+      <article class="job past">
+        <div class="job-head"><h3>ATA Freight Private Limited</h3><span class="when">Sep 2018 – Dec 2019</span></div>
+        <div class="role">Senior Operations Executive</div>
+        <ul><li>Ran air and ocean freight import operations; reconciled charges against rate sheets and introduced daily KPI reporting in Excel.</li></ul>
+      </article>
+      <article class="job past">
+        <div class="job-head"><h3>Shipco IT Private Limited</h3><span class="when">Sep 2016 – Aug 2018</span></div>
+        <div class="role">Operations Executive</div>
+        <ul><li>Kept shipment and charge data accurate across systems and built daily KPI and reconciliation reports, reducing billing queries.</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Case studies</h2><p>Each one started with a business question and ended with a measured result. Charts use real figures unless marked illustrative.</p></div>
+    <div class="cases">
+
+      <article class="case">
+        <div class="case-text">
+          <div class="proj-top"><span class="pico m"><svg class="icon"><use href="#i-target"/></svg></span><div><div class="award">Titan Award · Analytics owner</div><h3>Top 1,000 sellers: finding the real driver of contacts</h3></div></div>
+          <dl class="pwd">
+            <dt>Problem</dt><dd>Seller support contacts were rising and costly. Data sat in three systems with different category names. Goal: cut contacts per 1,000 units sold by 10%.</dd>
+            <dt>What I did</dt><dd>Reconciled the category taxonomies and joined 44.6M contacts with sales and seller data in SQL. Segmented sellers by region, then scored them on outreach, sales and inventory to pick who to contact in advance. Measured the contacted group before and after outreach.</dd>
+            <dt>Result</dt><dd>Contacts per 1,000 units fell from 32 to 24, a 25% cut against a 10% goal.</dd>
+          </dl>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">AWS Redshift</span><span class="tag">QuickSight</span><span class="tag">Segmentation</span></div>
+        </div>
+        <div class="viz">
+          <div class="viz-title">Insight: a tiny group drove a big share</div>
+          <div class="hrow"><span class="hl">Share of sellers</span><span class="htrack"><span class="hfill mk" style="width:max(0.07%,3px)"></span></span><span class="hv">0.07%</span></div>
+          <div class="hrow"><span class="hl">Share of contacts</span><span class="htrack"><span class="hfill" style="width:35%"></span></span><span class="hv">35%</span></div>
+          <p class="viz-note">1,000 of 1.5M sellers generated 15.7M of 44.6M contacts.</p>
+          <div class="viz-title" style="margin-top:14px">Contacts per 1,000 units</div>
+          <div class="cols">
+            <div class="col"><span class="cv">32</span><span class="cbar mute" style="height:100%"></span><span class="cl">Before</span></div>
+            <div class="col"><span class="cv">28.8</span><span class="cbar goal" style="height:90%"></span><span class="cl">10% goal</span></div>
+            <div class="col"><span class="cv">24</span><span class="cbar" style="height:75%"></span><span class="cl">After</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-text">
+          <div class="proj-top"><span class="pico"><svg class="icon"><use href="#i-bot"/></svg></span><div><div class="award">Empty Chair Award · Owned end to end</div><h3>Seller AI Assistant: measuring an AI product</h3></div></div>
+          <dl class="pwd">
+            <dt>Problem</dt><dd>Leadership was piloting an AI assistant for sellers in one category and needed to know if it was efficient enough to scale to other categories.</dd>
+            <dt>What I did</dt><dd>Brainstormed metrics with the product team and agreed four, with written definitions. Worked with data engineers to pull the tool's data through APIs and combined it with operational data. Grouped seller conversations by the team responsible (fraud, abuse, feedback, monitoring) using keyword rules and Bedrock summaries, then built dashboards comparing the assistant with human agents.</dd>
+            <dt>Result</dt><dd>Gave leadership the evidence to decide on scaling beyond the pilot.</dd>
+          </dl>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Redshift</span><span class="tag">QuickSight</span><span class="tag">Amazon Bedrock</span></div>
+        </div>
+        <div class="viz">
+          <div class="viz-title">The measurement framework</div>
+          <div class="kpis">
+            <div class="kpi"><b>Adoption</b><span>How many sellers used it?</span></div>
+            <div class="kpi"><b>Contact reduction</b><span>How much human effort did it save?</span></div>
+            <div class="kpi"><b>Speed</b><span>Time to resolution vs a human agent</span></div>
+            <div class="kpi"><b>Quality</b><span>Accuracy of answers vs a human agent</span></div>
+          </div>
+          <div class="flow"><span>Pilot</span><i>→</i><span>Measure 4 KPIs</span><i>→</i><span>Compare with humans</span><i>→</i><span class="hi">Scale decision</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-text">
+          <div class="proj-top"><span class="pico"><svg class="icon"><use href="#i-users"/></svg></span><div><div class="award">Customer experience</div><h3>First contact resolution and repeat contacts</h3></div></div>
+          <dl class="pwd">
+            <dt>Problem</dt><dd>Too many seller issues weren't solved on the first contact, so sellers came back again and again.</dd>
+            <dt>What I did</dt><dd>Defined first contact resolution and repeat contact rate with the customer experience team. Built seller cohorts by sales and product category to find the groups driving repeats, and tracked the metrics on a dashboard.</dd>
+            <dt>Result</dt><dd>First contact resolution rose 7 points; repeat contacts fell 5 points.</dd>
+          </dl>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Cohort analysis</span><span class="tag">QuickSight</span></div>
+        </div>
+        <div class="viz">
+          <div class="viz-title">Before and after (%)</div>
+          <div class="pairs">
+            <div class="pair"><div class="pbars"><div class="col"><span class="cv">80</span><span class="cbar mute" style="height:80%"></span></div><div class="col"><span class="cv">87</span><span class="cbar" style="height:87%"></span></div></div><span class="cl">First contact resolution</span></div>
+            <div class="pair"><div class="pbars"><div class="col"><span class="cv">20</span><span class="cbar mute" style="height:20%"></span></div><div class="col"><span class="cv">15</span><span class="cbar" style="height:15%"></span></div></div><span class="cl">Repeat contact rate</span></div>
+          </div>
+          <div class="key"><span><i class="mute"></i>Before</span><span><i></i>After</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-text">
+          <div class="proj-top"><span class="pico"><svg class="icon"><use href="#i-db"/></svg></span><div><div class="award">Process Ninja Award · Owned delivery</div><h3>Reporting platform migration and pipeline tuning</h3></div></div>
+          <dl class="pwd">
+            <dt>Problem</dt><dd>The division's reporting platform had to move to a new Redshift cluster in one month without disrupting reports used daily by 300+ people.</dd>
+            <dt>What I did</dt><dd>Mapped every dependency across 23 pipelines and 20 dashboards, rebuilt target tables, retired unused assets, and tested old and new outputs side by side (row counts, nulls, totals) before cutover. Tuned queries and data models along the way.</dd>
+            <dt>Result</dt><dd>Done in one month with zero disruption; a critical pipeline went from 8 hours to 1.5.</dd>
+          </dl>
+          <div class="tags"><span class="tag">AWS Redshift</span><span class="tag">S3</span><span class="tag">Glue</span><span class="tag">PySpark</span></div>
+        </div>
+        <div class="viz">
+          <div class="viz-title">How the cutover ran</div>
+          <div class="flow"><span>Map 23 pipelines</span><i>→</i><span>Rebuild tables</span><i>→</i><span>Test side by side</span><i>→</i><span class="hi">Cutover</span><i>→</i><span>Monitor</span></div>
+          <div class="viz-title" style="margin-top:16px">Critical pipeline runtime</div>
+          <div class="hrow"><span class="hl">Before</span><span class="htrack"><span class="hfill mute" style="width:100%"></span></span><span class="hv">8 h</span></div>
+          <div class="hrow"><span class="hl">After</span><span class="htrack"><span class="hfill" style="width:18.75%"></span></span><span class="hv">1.5 h</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-text">
+          <div class="proj-top"><span class="pico m"><svg class="icon"><use href="#i-chart"/></svg></span><div><div class="award">Power BI</div><h3>Quality dashboard with root causes</h3></div></div>
+          <dl class="pwd">
+            <dt>Problem</dt><dd>Audit results were exported by hand from an internal tool, so quality metrics were late and leaders couldn't see where defects came from.</dd>
+            <dt>What I did</dt><dd>Automated the exports through SQL ETL into Redshift and built a Power BI dashboard showing defects per million opportunities (DPMO) weekly and monthly by country, department and manager, with a three-level root cause breakdown.</dd>
+            <dt>Result</dt><dd>Metrics that weren't visible before; 0.3 headcount of reporting effort saved and one day less reporting delay. Used in performance and business reviews.</dd>
+          </dl>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">SQL</span><span class="tag">Redshift</span></div>
+        </div>
+        <div class="viz">
+          <div class="viz-title">Dashboard layout <em class="illus">Illustrative values</em></div>
+          <div class="mock">
+            <div class="mtiles"><div><small>DPMO this week</small><b>1,240</b></div><div><small>Audits</small><b>8,500</b></div><div><small>vs last week</small><b class="good">−6%</b></div></div>
+            <div class="viz-sub">DPMO by department</div>
+            <div class="hrow"><span class="hl">Dept A</span><span class="htrack"><span class="hfill mk" style="width:100%"></span></span><span class="hv">1,900</span></div>
+            <div class="hrow"><span class="hl">Dept B</span><span class="htrack"><span class="hfill" style="width:63%"></span></span><span class="hv">1,200</span></div>
+            <div class="hrow"><span class="hl">Dept C</span><span class="htrack"><span class="hfill" style="width:42%"></span></span><span class="hv">800</span></div>
+            <div class="viz-sub">Root cause drill-down</div>
+            <div class="tree"><span>Primary: Policy applied wrongly</span><span>Secondary: Missing document check</span><span>Tertiary: Outdated checklist</span></div>
+          </div>
+          <p class="viz-note">Real data is confidential; this shows the structure and the kind of insight leaders used.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="sec-head"><h2>Tech stack</h2><p>The tools behind the work, grouped the way an analytics pipeline runs: from source data to decision.</p></div>
+    <div class="stack">
+      <div class="stk"><h3><svg class="icon"><use href="#i-db"/></svg>Data &amp; warehousing</h3><div class="tools"><span>SQL</span><span>AWS Redshift</span><span>Amazon S3</span><span>Star &amp; snowflake schemas</span><span>Slowly changing dimensions</span></div></div>
+      <div class="stk"><h3><svg class="icon"><use href="#i-code"/></svg>Pipelines &amp; processing</h3><div class="tools"><span>ETL (100+ SQL jobs)</span><span>PySpark</span><span>AWS Glue</span><span>AWS Lambda</span><span>Scheduling &amp; alerting</span></div></div>
+      <div class="stk"><h3><svg class="icon"><use href="#i-chart"/></svg>BI &amp; visualisation</h3><div class="tools"><span>Amazon QuickSight</span><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Row-level security</span><span>Advanced Excel</span><span>Tableau (basic)</span></div></div>
+      <div class="stk"><h3><svg class="icon"><use href="#i-target"/></svg>Analysis &amp; statistics</h3><div class="tools"><span>KPI design</span><span>Root cause analysis</span><span>Cohort analysis</span><span>Segmentation</span><span>ARIMA forecasting</span><span>Regression</span><span>Audit sampling</span><span>Six Sigma</span></div></div>
+      <div class="stk"><h3><svg class="icon"><use href="#i-spark"/></svg>AI &amp; automation</h3><div class="tools"><span>Amazon Bedrock</span><span>RAG agents</span><span>Amazon Quick agents &amp; Flows</span><span>MCP</span><span>Text analytics</span></div></div>
+      <div class="stk"><h3><svg class="icon"><use href="#i-brief"/></svg>Ways of working</h3><div class="tools"><span>Requirements gathering</span><span>Stakeholder management</span><span>Backlog prioritisation</span><span>UAT &amp; validation</span><span>Documentation</span></div></div>
+    </div>
+    <div class="building"><b>Currently building:</b> Python (pandas), Snowflake, Agile/Scrum practices, CBAP and PL-300 certifications.</div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2><p>An honest view of where I'm strong and what I'm building.</p></div>
+    <div class="skills">
+      <div class="sk"><h3><svg class="icon"><use href="#i-code"/></svg>Data &amp; SQL</h3>
+        <div class="lvl">SQL (CTEs, window functions)<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div>
+        <div class="lvl">AWS Redshift, S3, Glue<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div>
+        <div class="lvl">PySpark pipelines<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i></span></div>
+        <div class="lvl">Python<span class="pips"><i class="l"></i><i class="l"></i><i></i><i></i><i></i></span></div>
+        <div class="lvl">Snowflake<span class="pips"><i class="l"></i><i></i><i></i><i></i><i></i></span></div>
+      </div>
+      <div class="sk"><h3><svg class="icon"><use href="#i-chart"/></svg>BI &amp; Reporting</h3>
+        <div class="lvl">Amazon QuickSight<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div>
+        <div class="lvl">Power BI (DAX, Power Query)<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div>
+        <div class="lvl">Data modelling (star schema)<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div>
+        <div class="lvl">Advanced Excel<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div>
+        <div class="lvl">Tableau<span class="pips"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></span></div>
+      </div>
+      <div class="sk"><h3><svg class="icon"><use href="#i-users"/></svg>Business &amp; AI</h3>
+        <div class="lvl">Requirements &amp; stakeholders<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div>
+        <div class="lvl">KPI design &amp; root cause<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div>
+        <div class="lvl">GenAI agents (Bedrock)<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i></span></div>
+        <div class="lvl">Forecasting (ARIMA)<span class="pips"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i></span></div>
+        <div class="lvl">Agile / Scrum<span class="pips"><i class="l"></i><i class="l"></i><i></i><i></i><i></i></span></div>
+      </div>
+    </div>
+    <div class="legend"><span><i style="background:var(--accent)"></i>Hands-on experience</span><span><i style="background:var(--mark)"></i>Currently building</span></div>
+  </section>
+
+  <section id="education">
+    <div class="duo">
+      <div class="card"><h3><svg class="icon"><use href="#i-cap"/></svg>Education &amp; certifications</h3>
+        <div class="row"><span class="pico"><svg class="icon"><use href="#i-cap"/></svg></span><div><b>B.E. Computer Science &amp; Engineering</b><small>Savitribai Phule Pune University · 2016</small></div></div>
+        <div class="row"><span class="pico m"><svg class="icon"><use href="#i-cert"/></svg></span><div><b>CBAP (IIBA)<span class="pill">In progress</span></b><small>Certified Business Analysis Professional</small></div></div>
+        <div class="row"><span class="pico m"><svg class="icon"><use href="#i-cert"/></svg></span><div><b>Microsoft PL-300<span class="pill">In progress</span></b><small>Power BI Data Analyst</small></div></div>
+      </div>
+      <div class="card"><h3><svg class="icon"><use href="#i-award"/></svg>Awards at Amazon</h3>
+        <div class="row"><span class="pico m"><svg class="icon"><use href="#i-award"/></svg></span><div><b>Titan Award · 2025</b><small>Top 1,000 sellers contact reduction</small></div></div>
+        <div class="row"><span class="pico m"><svg class="icon"><use href="#i-award"/></svg></span><div><b>Empty Chair Award · 2026</b><small>Seller AI Assistant, owned end to end</small></div></div>
+        <div class="row"><span class="pico m"><svg class="icon"><use href="#i-award"/></svg></span><div><b>Process Ninja Award · 2024</b><small>Zero-disruption platform migration</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div><h2>Let's talk</h2><p>Looking for an analyst who finds the real driver and proves the impact? I'm available to join immediately.</p></div>
+      <div class="clist">
+        <div class="citem"><svg class="icon"><use href="#i-mail"/></svg><span id="em">mahesh.jadhav6688@gmail.com</span><button type="button" data-copy="mahesh.jadhav6688@gmail.com">Copy</button></div>
+        <div class="citem"><svg class="icon"><use href="#i-phone"/></svg><span>+91 8446824685</span><button type="button" data-copy="+91 8446824685">Copy</button></div>
+        <div class="citem"><svg class="icon"><use href="#i-link"/></svg><a href="https://www.linkedin.com/in/mahesh-jadhav-352b6b119/" target="_blank" rel="noopener">linkedin.com/in/mahesh-jadhav-352b6b119</a></div>
+      </div>
+    </div>
+  </section>
+  <footer>Mahesh Sudhakar Jadhav · Data &amp; Business Analyst · Hyderabad</footer>
+</div>
+
+<script>
+(function(){
+  const scenes=[
+    {k:"Hello",t:"I'm Mahesh, a data and business analyst.",x:"9 years 11 months of experience · 6 years 7 months at Amazon."},
+    {k:"Finding the real driver",t:"1,000 of 1.5M sellers drove 35% of contacts.",x:"Targeted outreach cut contacts per 1,000 units by 25%. Titan Award.",bars:[["32","Before",100,""],["24","After",75,"alt"]]},
+    {k:"Measuring an AI product",t:"Defined the success metrics for a Seller AI Assistant.",x:"Leadership used them to decide on scaling. Empty Chair Award.",chips:["Adoption","Contact reduction","Speed","Quality"]},
+    {k:"Better customer experience",t:"First contact resolution 80% → 87%.",x:"Repeat contacts fell from 20% to 15%.",big:"+7 pts"},
+    {k:"Delivering under pressure",t:"23 pipelines, 20 dashboards, zero disruption.",x:"Migrated in one month. Process Ninja Award.",chips:["SQL","Redshift","Power BI","QuickSight","Bedrock"]},
+    {k:"Next",t:"Let's turn your data into decisions.",x:"Open to product analytics and BI roles · available immediately."}
+  ];
+  const DUR=5000, TOTAL=DUR*scenes.length;
+  const el=document.getElementById('scene'), fill=document.getElementById('fill'), time=document.getElementById('time');
+  const toggle=document.getElementById('toggle'), over=document.getElementById('playover');
+  let pos=0, playing=false, last=0, cur=-1;
+  const fmt=ms=>{const s=Math.floor(ms/1000);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")};
+  function render(i){
+    const s=scenes[i]; let h='<div class="s-kicker">'+s.k+'</div><div class="s-title">'+s.t+'</div>';
+    if(s.x) h+='<p class="s-text">'+s.x+'</p>';
+    if(s.big) h+='<div class="big" style="margin-top:12px">'+s.big+'</div>';
+    if(s.bars) h+='<div class="bars">'+s.bars.map(b=>'<div class="bar '+b[3]+'" data-h="'+b[2]+'"><b>'+b[0]+'</b><i>'+b[1]+'</i></div>').join('')+'</div>';
+    if(s.chips) h+='<div class="chips">'+s.chips.map(c=>'<span class="chip">'+c+'</span>').join('')+'</div>';
+    el.classList.add('out');
+    setTimeout(()=>{el.innerHTML=h;el.classList.remove('out','on');
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{el.classList.add('on');
+        el.querySelectorAll('.bar').forEach(b=>b.style.height=(b.dataset.h*0.95)+'px');
+        el.querySelectorAll('.chip').forEach((c,j)=>c.style.transitionDelay=(j*120)+'ms');}));},cur<0?0:220);
+  }
+  function show(ms){const i=Math.min(scenes.length-1,Math.floor(ms/DUR)); if(i!==cur){render(i);cur=i}
+    fill.style.width=(ms/TOTAL*100)+'%'; time.textContent=fmt(ms)+' / '+fmt(TOTAL);}
+  function setIcon(p){toggle.innerHTML='<svg class="icon"><use href="#i-'+(p?'pause':'play')+'"/></svg>';toggle.setAttribute('aria-label',p?'Pause':'Play')}
+  function tick(t){if(!playing)return; pos+=t-last; last=t; if(pos>=TOTAL){pos=TOTAL;show(pos);stop();return} show(pos); requestAnimationFrame(tick)}
+  function play(){if(pos>=TOTAL)pos=0; playing=true; over.hidden=true; setIcon(true); last=performance.now(); requestAnimationFrame(tick)}
+  function stop(){playing=false; setIcon(false); if(pos>=TOTAL) over.hidden=false}
+  toggle.onclick=()=>playing?stop():play();
+  over.onclick=play;
+  document.getElementById('heroPlay').onclick=()=>{document.getElementById('story').scrollIntoView({behavior:'smooth',block:'center'});play()};
+  document.getElementById('prev').onclick=()=>{pos=Math.max(0,(Math.floor(pos/DUR)-1)*DUR);show(pos)};
+  document.getElementById('next').onclick=()=>{pos=Math.min(TOTAL-1,(Math.floor(pos/DUR)+1)*DUR);show(pos)};
+  document.getElementById('restart').onclick=()=>{pos=0;cur=-1;show(0);play()};
+  document.getElementById('track').onclick=e=>{const r=e.currentTarget.getBoundingClientRect();pos=Math.max(0,Math.min(TOTAL-1,(e.clientX-r.left)/r.width*TOTAL));show(pos)};
+  show(0);
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+    const v=b.dataset.copy; const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)};
+    try{navigator.clipboard.writeText(v).then(done).catch(()=>sel(b))}catch(e){sel(b)}
+    function sel(btn){const s=btn.previousElementSibling;const r=document.createRange();r.selectNodeContents(s);const g=getSelection();g.removeAllRanges();g.addRange(r)}
+  }));
+})();
+</script>
+
+</body></html>
