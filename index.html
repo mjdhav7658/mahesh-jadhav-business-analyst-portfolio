@@ -1,4 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mahesh Jadhav - Data and Business Analyst portfolio">
 <title>Mahesh Jadhav Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,6 +166,46 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
 .building b{color:var(--ink)}
 @media (max-width:860px){.stack{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.stack{grid-template-columns:1fr}}
+
+/* insight deep dive */
+.ins-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px}
+.ins-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.ins-card h3{margin:6px 0 8px;font-size:19px;line-height:1.25}
+.ins-card p{margin:0;color:var(--muted)}
+.step-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.split{display:flex;height:34px;border-radius:8px;overflow:hidden;margin-top:16px;font-size:13px;font-weight:600}
+.split span{display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.split-a{background:var(--mark);color:#1a1205}
+.split-b{background:var(--line);color:var(--ink)}
+.map-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:12px}
+.map-sub{font-size:13px;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{background:var(--paper);color:var(--muted);border:0;padding:6px 14px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--accent);color:var(--paper)}
+.tilemap{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:4px;overflow-x:auto}
+.tile{aspect-ratio:1;border-radius:6px;display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:500;transition:background .5s ease,color .5s ease;min-width:22px}
+.tile.empty{background:transparent}
+.scale{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-top:12px;flex-wrap:wrap}
+.scale i{width:120px;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--accent-soft),var(--accent));display:inline-block}
+.decision{display:flex;align-items:stretch;gap:10px;margin-top:18px;flex-wrap:wrap}
+.decision > i{font-style:normal;color:var(--muted);align-self:center;font-size:20px}
+.dec-item{flex:1;min-width:180px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.dec-item b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.dec-item span{font-weight:600}
+.dec-item.hi{background:var(--accent);border-color:var(--accent)}
+.dec-item.hi b,.dec-item.hi span{color:var(--paper)}
+.ai-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.aik{background:var(--bg);border-radius:10px;padding:12px}
+.aik small{display:block;font-size:12px;color:var(--muted)}
+.aik b{display:block;font-family:var(--display);font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.2}
+.aik span{font-size:13px;color:var(--muted)}
+.qchart{margin-top:16px;background:var(--bg);border-radius:10px;padding:14px}
+.q-title{font-weight:600;font-size:14px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.q-bars{display:flex;align-items:flex-end;gap:18px;height:150px;padding-top:20px}
+.q-group{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;min-width:0}
+.q-pair{display:flex;gap:6px;align-items:flex-end;height:100%;width:100%;justify-content:center}
+.q-pair .cbar{max-width:30px}
+@media (max-width:860px){.ins-grid{grid-template-columns:1fr}.ai-kpis{grid-template-columns:1fr}}
 /* case studies */
 .cases{display:flex;flex-direction:column;gap:20px}
 .case{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
@@ -221,6 +266,10 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
 @media (max-width:520px){.skills{grid-template-columns:1fr}.navlinks{display:none}.stage{padding:20px}.bar{width:42px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor" stroke="none"/></symbol>
@@ -248,7 +297,7 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
 <div class="wrap">
   <nav>
     <div class="brand"><span class="mono-badge">MJ</span>Mahesh Jadhav</div>
-    <div class="navlinks"><a href="#story">Story</a><a href="#work">Experience</a><a href="#projects">Case studies</a><a href="#stack">Tech stack</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+    <div class="navlinks"><a href="#story">Story</a><a href="#work">Experience</a><a href="#insight">Insights</a><a href="#projects">Case studies</a><a href="#stack">Tech stack</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
   </nav>
 
   <header class="hero">
@@ -333,6 +382,59 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
         <ul><li>Kept shipment and charge data accurate across systems and built daily KPI and reconciliation reports, reducing billing queries.</li></ul>
       </article>
     </div>
+  </section>
+
+  <section id="insight">
+    <div class="sec-head"><h2>From insight to decision</h2><p>How one finding about the top 1,000 sellers led to a new support team, and how the AI assistant then cut contacts for the same sellers.</p></div>
+
+    <div class="ins-grid">
+      <div class="ins-card">
+        <div class="step-k">Step 1 · Who drives the contacts?</div>
+        <h3>760 of the top 1,000 sellers were based in China</h3>
+        <p>When I profiled the 1,000 sellers driving 35% of all contacts, 76% were Chinese sellers. Their contact rate was far higher than other sellers', and transcripts showed why: a language barrier made policies and fixes hard to understand, so they contacted support again and again.</p>
+        <div class="split" aria-label="760 of 1,000 sellers based in China">
+          <span class="split-a" style="width:76%">China · 760</span><span class="split-b" style="width:24%">Others · 240</span>
+        </div>
+      </div>
+
+      <div class="ins-card map-card">
+        <div class="map-head">
+          <div><div class="step-k">Contacts per 1,000 units by seller country</div><div class="map-sub">Darker = more contacts per 1,000 units</div></div>
+          <div class="seg" role="tablist" aria-label="Map view">
+            <button type="button" role="tab" aria-selected="true" data-view="before">Before</button>
+            <button type="button" role="tab" aria-selected="false" data-view="after">After</button>
+          </div>
+        </div>
+        <div class="tilemap" id="tilemap" aria-label="World tile map of contacts per 1,000 units"></div>
+        <div class="scale"><span>Lower</span><i></i><span>Higher</span><em class="illus">Illustrative shading</em></div>
+        <p class="viz-note" id="mapNote">Before: Chinese sellers had by far the highest contacts per 1,000 units.</p>
+      </div>
+    </div>
+
+    <div class="decision">
+      <div class="dec-item"><b>Root cause</b><span>Language barrier for Chinese sellers</span></div>
+      <i aria-hidden="true">→</i>
+      <div class="dec-item hi"><b>Decision</b><span>Form a language-specific (Chinese) support team</span></div>
+      <i aria-hidden="true">→</i>
+      <div class="dec-item"><b>Result</b><span>Top 1,000 contacts per 1,000 units: 32 → 24 (−25%)</span></div>
+    </div>
+
+    <div class="ins-card" style="margin-top:18px">
+      <div class="step-k">Step 2 · Seller AI Assistant for the same sellers</div>
+      <h3>Fewer contacts per issue, answers in seconds</h3>
+      <p>We then measured the AI assistant on these sellers' issues against issues handled by human agents, quarter by quarter.</p>
+      <div class="ai-kpis">
+        <div class="aik"><small>Contacts per issue</small><b>−10%</b><span>vs issues handled by humans</span></div>
+        <div class="aik"><small>Time to resolution</small><b>5 min → 5 sec</b><span>AI vs human agent</span></div>
+        <div class="aik"><small>Accuracy</small><b>vs human</b><span>Compared on a human-reviewed sample</span></div>
+      </div>
+      <div class="qchart" aria-label="Contacts per issue by quarter, AI vs human">
+        <div class="q-title">Contacts per issue by quarter <em class="illus">Illustrative trend</em></div>
+        <div class="q-bars" id="qbars"></div>
+        <div class="key"><span><i class="mute"></i>Human-handled</span><span><i></i>AI assistant</span></div>
+      </div>
+    </div>
+    <p class="viz-note">Exact country-level figures are confidential; shading and quarterly trend show the pattern, while the headline results are real.</p>
   </section>
 
   <section id="projects">
@@ -523,6 +625,34 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
 
 <script>
 (function(){
+  const tiles={CA:[2,0],US:[2,1],MX:[2,2],BR:[3,4],GB:[6,0],DE:[7,0],FR:[6,1],ES:[5,2],IT:[7,2],TR:[8,2],AE:[9,3],IN:[10,3],CN:[11,1],JP:[13,1],KR:[12,1],AU:[12,4]};
+  const before={CA:38,US:40,MX:42,BR:44,GB:35,DE:34,FR:36,ES:37,IT:37,TR:46,AE:43,IN:48,CN:100,JP:39,KR:41,AU:36};
+  const after=Object.assign({},before,{CN:90});
+  const el=document.getElementById('tilemap'); if(!el) return;
+  const grid=[]; for(let r=0;r<5;r++)for(let c=0;c<14;c++)grid.push(null);
+  Object.entries(tiles).forEach(([k,[c,r]])=>grid[r*14+c]=k);
+  el.innerHTML=grid.map(k=>k?'<div class="tile" data-c="'+k+'" title="'+k+'">'+k+'</div>':'<div class="tile empty"></div>').join('');
+  const css=getComputedStyle(document.documentElement);
+  function paint(vals){
+    el.querySelectorAll('.tile[data-c]').forEach(t=>{
+      const v=vals[t.dataset.c]; const p=Math.max(0,Math.min(1,(v-30)/70));
+      t.style.background='color-mix(in srgb, var(--accent) '+Math.round(15+p*85)+'%, var(--accent-soft))';
+      t.style.color=p>0.45?'var(--paper)':'var(--ink)';
+      t.title=t.dataset.c+': index '+v;
+    });
+  }
+  paint(before);
+  const note=document.getElementById('mapNote');
+  document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-selected',x===b?'true':'false'));
+    const a=b.dataset.view==='after'; paint(a?after:before);
+    note.textContent=a?'After: with the Chinese-language team and the AI assistant, contacts per issue for these sellers fell 10% versus human-handled issues.':'Before: Chinese sellers had by far the highest contacts per 1,000 units.';
+  }));
+  const q=[['Q1',100,100],['Q2',100,96],['Q3',100,92],['Q4',100,90]];
+  document.getElementById('qbars').innerHTML=q.map(([l,h,a])=>'<div class="q-group"><div class="q-pair"><div class="col"><span class="cv">'+h+'</span><span class="cbar mute" style="height:'+(h*0.9)+'%"></span></div><div class="col"><span class="cv">'+a+'</span><span class="cbar" style="height:'+(a*0.9)+'%"></span></div></div><span class="cl">'+l+'</span></div>').join('');
+})();
+
+(function(){
   const scenes=[
     {k:"Hello",t:"I'm Mahesh, a data and business analyst.",x:"9 years 11 months of experience · 6 years 7 months at Amazon."},
     {k:"Finding the real driver",t:"1,000 of 1.5M sellers drove 35% of contacts.",x:"Targeted outreach cut contacts per 1,000 units by 25%. Titan Award.",bars:[["32","Before",100,""],["24","After",75,"alt"]]},
@@ -537,7 +667,7 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
   let pos=0, playing=false, last=0, cur=-1;
   const fmt=ms=>{const s=Math.floor(ms/1000);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")};
   function render(i){
-    const s=scenes[i]; let h='<div class="s-kicker">'+s.k+'</div><div class="s-title">'+s.t+'</div>';
+    const s=scenes[i]; if(!s) return; let h='<div class="s-kicker">'+s.k+'</div><div class="s-title">'+s.t+'</div>';
     if(s.x) h+='<p class="s-text">'+s.x+'</p>';
     if(s.big) h+='<div class="big" style="margin-top:12px">'+s.big+'</div>';
     if(s.bars) h+='<div class="bars">'+s.bars.map(b=>'<div class="bar '+b[3]+'" data-h="'+b[2]+'"><b>'+b[0]+'</b><i>'+b[1]+'</i></div>').join('')+'</div>';
@@ -548,10 +678,10 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
         el.querySelectorAll('.bar').forEach(b=>b.style.height=(b.dataset.h*0.95)+'px');
         el.querySelectorAll('.chip').forEach((c,j)=>c.style.transitionDelay=(j*120)+'ms');}));},cur<0?0:220);
   }
-  function show(ms){const i=Math.min(scenes.length-1,Math.floor(ms/DUR)); if(i!==cur){render(i);cur=i}
+  function show(ms){ms=Math.max(0,ms||0);const i=Math.max(0,Math.min(scenes.length-1,Math.floor(ms/DUR))); if(i!==cur){render(i);cur=i}
     fill.style.width=(ms/TOTAL*100)+'%'; time.textContent=fmt(ms)+' / '+fmt(TOTAL);}
   function setIcon(p){toggle.innerHTML='<svg class="icon"><use href="#i-'+(p?'pause':'play')+'"/></svg>';toggle.setAttribute('aria-label',p?'Pause':'Play')}
-  function tick(t){if(!playing)return; pos+=t-last; last=t; if(pos>=TOTAL){pos=TOTAL;show(pos);stop();return} show(pos); requestAnimationFrame(tick)}
+  function tick(t){if(!playing)return; pos+=Math.max(0,t-last); last=t; if(pos>=TOTAL){pos=TOTAL;show(pos);stop();return} show(pos); requestAnimationFrame(tick)}
   function play(){if(pos>=TOTAL)pos=0; playing=true; over.hidden=true; setIcon(true); last=performance.now(); requestAnimationFrame(tick)}
   function stop(){playing=false; setIcon(false); if(pos>=TOTAL) over.hidden=false}
   toggle.onclick=()=>playing?stop():play();
@@ -570,4 +700,5 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;text-align:center}
 })();
 </script>
 
-</body></html>
+</body>
+</html>
